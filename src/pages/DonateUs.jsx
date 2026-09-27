@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import PageHero from '../components/PageHero';
 import { Heart, Check, User, Mail, Phone, Upload } from 'lucide-react';
 import { asset } from '../utils/asset';
+import { supabase } from '../utils/supabase';
 
 const familyMembers = [
   { name: 'C. James White', role: 'Founder' },
@@ -100,12 +101,66 @@ export default function DonateUs() {
   const navigate = useNavigate();
   const [selectedAmount, setSelectedAmount] = useState('1000');
   const [customAmount, setCustomAmount] = useState('');
-  const [donor, setDonor] = useState({ name: '', email: '', phone: '' });
+  const [donor, setDonor] = useState({ name: '', email: '', phone: '', message: '' });
+  const [file, setFile] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleDonate = (e) => {
+  const handleDonate = async (e) => {
     e.preventDefault();
-    const finalAmt = customAmount || selectedAmount;
-    navigate('/payment-successful', { state: { amount: finalAmt, name: donor.name } });
+    setIsSubmitting(true);
+    
+    try {
+      const finalAmt = customAmount || selectedAmount;
+      let screenshotUrl = null;
+
+      // 1. Upload File if present
+      if (file) {
+        const fileExt = file.name.split('.').pop();
+        const fileName = `${Date.now()}_${Math.random().toString(36).substring(7)}.${fileExt}`;
+        const filePath = `receipts/${fileName}`;
+        
+        const { error: uploadError, data } = await supabase.storage
+          .from('donations')
+          .upload(filePath, file);
+
+        if (uploadError) {
+          throw uploadError;
+        }
+        
+        // Get public url
+        const { data: publicUrlData } = supabase.storage
+          .from('donations')
+          .getPublicUrl(filePath);
+          
+        screenshotUrl = publicUrlData.publicUrl;
+      }
+
+      // 2. Insert into Database
+      const { error: dbError } = await supabase
+        .from('donations')
+        .insert([
+          { 
+            full_name: donor.name, 
+            email: donor.email, 
+            phone: donor.phone, 
+            amount: finalAmt, 
+            message: donor.message,
+            screenshot_url: screenshotUrl 
+          }
+        ]);
+
+      if (dbError) {
+        throw dbError;
+      }
+
+      // Success
+      navigate('/payment-successful', { state: { amount: finalAmt, name: donor.name } });
+    } catch (error) {
+      console.error('Error submitting donation:', error);
+      alert('There was an error submitting your donation details. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToForm = (e) => {
@@ -446,19 +501,28 @@ export default function DonateUs() {
                 <p style={{ color: '#005495', fontWeight: 700, fontSize: '0.88rem', margin: '4px 0 0 0' }}>Upload Screenshot*</p>
                 <div style={fieldWrap}>
                   <Upload size={18} color="#4AA3E0" />
-                  <input type="file" style={{ ...fieldInput, padding: '8px 0' }} />
+                  <input 
+                    type="file" 
+                    accept="image/*"
+                    required
+                    onChange={(e) => setFile(e.target.files[0])}
+                    style={{ ...fieldInput, padding: '8px 0' }} 
+                  />
                 </div>
 
                 <p style={{ color: '#005495', fontWeight: 700, fontSize: '0.88rem', margin: '4px 0 0 0' }}>Message (Optional)</p>
                 <textarea
                   rows={4}
                   placeholder="Write your message here....."
+                  value={donor.message}
+                  onChange={(e) => setDonor({ ...donor, message: e.target.value })}
                   style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #bfbfbf', fontSize: '0.92rem', resize: 'vertical' }}
                 />
 
                 <div style={{ textAlign: 'center', marginTop: '8px' }}>
                   <button
                     type="submit"
+                    disabled={isSubmitting}
                     style={{
                       display: 'inline-flex',
                       alignItems: 'center',
@@ -470,10 +534,11 @@ export default function DonateUs() {
                       padding: '12px 28px',
                       fontWeight: 700,
                       fontSize: '0.95rem',
-                      cursor: 'pointer'
+                      cursor: isSubmitting ? 'not-allowed' : 'pointer',
+                      opacity: isSubmitting ? 0.7 : 1
                     }}
                   >
-                    Make a Donation
+                    {isSubmitting ? 'Submitting...' : 'Make a Donation'}
                     <Heart size={16} />
                   </button>
                 </div>
