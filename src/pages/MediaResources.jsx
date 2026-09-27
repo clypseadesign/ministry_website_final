@@ -77,7 +77,7 @@ export default function MediaResources() {
                     <h3
                       style={{
                         color: '#005495',
-                        fontSize: '1.7rem',
+                        fontSize: '2.2rem',
                         margin: 0,
                         fontFamily: 'var(--font-heading-fancy)',
                         textTransform: 'uppercase',

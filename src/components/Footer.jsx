@@ -28,7 +28,7 @@ export default function Footer() {
         {/* Footer Columns */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '32px', marginBottom: '48px' }}>
           <div>
-            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: 'var(--font-heading)', textTransform: 'uppercase', letterSpacing: '1px' }}>Important Links</h4>
+            <h4 style={{ color: '#ffffff', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: '"Century Gothic", sans-serif', textTransform: 'uppercase', letterSpacing: '1px' }}>Important Links</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><NavLink to="/media-resources" style={{ color: '#cbd5e1', fontSize: '0.9rem', textDecoration: 'none', transition: 'var(--transition)' }}>Media & Resource</NavLink></li>
               <li><NavLink to="/get-involved" style={{ color: '#cbd5e1', fontSize: '0.9rem', textDecoration: 'none', transition: 'var(--transition)' }}>Get Involved</NavLink></li>
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: 'var(--font-heading)', textTransform: 'uppercase', letterSpacing: '1px' }}>Company</h4>
+            <h4 style={{ color: '#ffffff', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: '"Century Gothic", sans-serif', textTransform: 'uppercase', letterSpacing: '1px' }}>Company</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><NavLink to="/about-us" style={{ color: '#cbd5e1', fontSize: '0.9rem', textDecoration: 'none', transition: 'var(--transition)' }}>About Us</NavLink></li>
               <li><NavLink to="/our-work" style={{ color: '#cbd5e1', fontSize: '0.9rem', textDecoration: 'none', transition: 'var(--transition)' }}>Our Work</NavLink></li>
@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: 'var(--font-heading)', textTransform: 'uppercase', letterSpacing: '1px' }}>Policies</h4>
+            <h4 style={{ color: '#ffffff', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: '"Century Gothic", sans-serif', textTransform: 'uppercase', letterSpacing: '1px' }}>Policies</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li><NavLink to="/transparency-legal" style={{ color: '#cbd5e1', fontSize: '0.9rem', textDecoration: 'none', transition: 'var(--transition)' }}>Privacy Policy</NavLink></li>
               <li><NavLink to="/transparency-legal" style={{ color: '#cbd5e1', fontSize: '0.9rem', textDecoration: 'none', transition: 'var(--transition)' }}>Refund Policy</NavLink></li>
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: 'var(--font-heading)', textTransform: 'uppercase', letterSpacing: '1px' }}>Contact</h4>
+            <h4 style={{ color: '#ffffff', fontSize: '1.4rem', fontWeight: '700', marginBottom: '20px', fontFamily: '"Century Gothic", sans-serif', textTransform: 'uppercase', letterSpacing: '1px' }}>Contact</h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <li style={{ color: '#cbd5e1', fontSize: '0.9rem' }}>
                 support@theuniversalroyallawoflove.org

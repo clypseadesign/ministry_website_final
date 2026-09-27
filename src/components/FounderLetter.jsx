@@ -3,7 +3,7 @@ import { asset } from '../utils/asset';
 
 export default function FounderLetter() {
   return (
-    <section className="section" style={{ background: '#f0f5fc', padding: '64px 0 80px 0' }}>
+    <section className="section" style={{ background: '#ffffff', padding: '64px 0 80px 0' }}>
       <div className="container">
         {/* Section Heading */}
         <h2 

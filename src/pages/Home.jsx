@@ -97,11 +97,11 @@ export default function Home() {
                 to="/donate-us"
                 style={{
                   display: 'inline-block',
-                  background: 'var(--accent-gold)',
+                  background: 'var(--primary-blue)',
                   borderRadius: '9999px',
                   padding: '14px 36px',
                   fontSize: '1.05rem',
-                  color: '#005495',
+                  color: '#ffffff',
                   boxShadow: '0 8px 20px rgba(0, 85, 149, 0.25)',
                   whiteSpace: 'nowrap',
                   textDecoration: 'none',
@@ -173,7 +173,7 @@ export default function Home() {
       </section>
 
       {/* Section 3: Our Belief: Spreading Love Across the World */}
-      <section className="section" style={{ background: 'var(--bg-light-blue)' }}>
+      <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
           <h2 style={{ fontSize: '2.3rem', marginBottom: '36px', fontFamily: 'var(--font-heading-fancy)', color: 'var(--primary-blue)', textTransform: 'uppercase', letterSpacing: '1px', textAlign: 'center' }}>
             OUR BELIEF: SPREADING LOVE ACROSS THE WORLD
@@ -199,57 +199,57 @@ export default function Home() {
       </section>
 
       {/* Section 4: Support Our Mission / Tiers */}
-      <section className="section" style={{ background: 'var(--primary-dark-blue)', color: '#ffffff' }}>
+      <section className="section" style={{ background: 'var(--primary-blue)', color: '#ffffff', padding: '48px 0' }}>
         <div className="container">
-          <div className="grid-2" style={{ alignItems: 'center', gap: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.8fr', gap: '48px', alignItems: 'center' }}>
             <div>
-              <span style={{ color: 'var(--accent-gold)', fontWeight: '700', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
+              <span style={{ color: '#ffffff', fontWeight: '700', fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '1px' }}>
                 SUPPORT OUR MISSION
               </span>
-              <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-heading-fancy)', margin: '12px 0 20px 0', color: '#ffffff', letterSpacing: '2px', lineHeight: '1.2' }}>
-                Your Support Can Change Lives
+              <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-heading-fancy)', margin: '12px 0 16px 0', color: '#ffffff', letterSpacing: '1px', lineHeight: '1.2', textTransform: 'uppercase' }}>
+                YOUR SUPPORT CAN CHANGE LIVES
               </h2>
-              <p style={{ color: '#cbd5e1', marginBottom: '28px', fontSize: '0.95rem', lineHeight: '1.7' }}>
+              <p style={{ color: '#cbd5e1', marginBottom: '24px', fontSize: '0.95rem', lineHeight: '1.6' }}>
                 Every contribution helps us continue our mission of love, service, and hope for a better tomorrow.
               </p>
-              <NavLink to="/donate-us" className="btn-primary" style={{ background: 'var(--accent-gold)', color: '#005495', whiteSpace: 'nowrap' }}>
+              <NavLink to="/donate-us" className="btn-primary" style={{ background: 'var(--accent-gold)', color: '#005495', whiteSpace: 'nowrap', border: 'none', padding: '10px 28px', fontSize: '0.95rem', borderRadius: '9999px' }}>
                 Make a Donation ♡
               </NavLink>
             </div>
 
-            <div className="grid-3" style={{ gap: '16px' }}>
-              <div style={{ background: 'rgba(255, 255, 255, 0.08)', color: '#ffffff', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.2)', borderRadius: 'var(--radius-md)', padding: '24px' }}>
+            <div className="grid-3" style={{ gap: '20px' }}>
+              <div style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: 'var(--radius-md)', padding: '32px 20px' }}>
                 <span style={{ fontSize: '0.75rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#cbd5e1' }}>BASIC SUPPORT</span>
-                <div style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--accent-gold)', margin: '8px 0' }}>₹ 500</div>
-                <ul style={{ listStyle: 'none', fontSize: '0.8rem', color: '#cbd5e1', marginBottom: '16px', lineHeight: '1.8' }}>
+                <div style={{ fontSize: '1.8rem', fontWeight: '800', fontFamily: 'var(--font-heading-fancy)', color: '#ffffff', margin: '12px 0 20px 0' }}>₹ 500</div>
+                <ul style={{ listStyle: 'none', fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '24px', lineHeight: '1.6' }}>
                   <li>✓ Local Programs</li>
                   <li>✓ Peace Literature</li>
                 </ul>
-                <NavLink to="/donate-us" style={{ display: 'inline-block', color: '#ffffff', border: '2px solid #ffffff', padding: '8px 20px', borderRadius: '9999px', fontSize: '0.8rem', textDecoration: 'none', fontWeight: '700' }}>
+                <NavLink to="/donate-us" style={{ display: 'inline-block', color: '#ffffff', border: '1px solid #ffffff', padding: '8px 24px', borderRadius: '9999px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: '600', transition: 'var(--transition)' }}>
                   Donate Now
                 </NavLink>
               </div>
 
-              <div style={{ background: 'rgba(255, 255, 255, 0.08)', color: '#ffffff', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.2)', borderRadius: 'var(--radius-md)', padding: '24px' }}>
+              <div style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: 'var(--radius-md)', padding: '32px 20px' }}>
                 <span style={{ fontSize: '0.75rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#cbd5e1' }}>GROWTH SUPPORT</span>
-                <div style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--accent-gold)', margin: '8px 0' }}>₹ 1000</div>
-                <ul style={{ listStyle: 'none', fontSize: '0.8rem', color: '#cbd5e1', marginBottom: '16px', lineHeight: '1.8' }}>
+                <div style={{ fontSize: '1.8rem', fontWeight: '800', fontFamily: 'var(--font-heading-fancy)', color: '#ffffff', margin: '12px 0 20px 0' }}>₹ 1000</div>
+                <ul style={{ listStyle: 'none', fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '24px', lineHeight: '1.6' }}>
                   <li>✓ Multilingual Trans</li>
                   <li>✓ Sponsor Peace Events</li>
                 </ul>
-                <NavLink to="/donate-us" style={{ display: 'inline-block', color: '#ffffff', border: '2px solid #ffffff', padding: '8px 20px', borderRadius: '9999px', fontSize: '0.8rem', textDecoration: 'none', fontWeight: '700' }}>
+                <NavLink to="/donate-us" style={{ display: 'inline-block', color: '#ffffff', border: '1px solid #ffffff', padding: '8px 24px', borderRadius: '9999px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: '600', transition: 'var(--transition)' }}>
                   Donate Now
                 </NavLink>
               </div>
 
-              <div style={{ background: 'rgba(255, 255, 255, 0.08)', color: '#ffffff', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.2)', borderRadius: 'var(--radius-md)', padding: '24px' }}>
+              <div style={{ background: 'rgba(255, 255, 255, 0.1)', color: '#ffffff', textAlign: 'center', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: 'var(--radius-md)', padding: '32px 20px' }}>
                 <span style={{ fontSize: '0.75rem', letterSpacing: '1px', textTransform: 'uppercase', color: '#cbd5e1' }}>SPONSOR INITIATIVE</span>
-                <div style={{ fontSize: '1.8rem', fontWeight: '900', color: 'var(--accent-gold)', margin: '8px 0' }}>₹ 5000</div>
-                <ul style={{ listStyle: 'none', fontSize: '0.8rem', color: '#cbd5e1', marginBottom: '16px', lineHeight: '1.8' }}>
+                <div style={{ fontSize: '1.8rem', fontWeight: '800', fontFamily: 'var(--font-heading-fancy)', color: '#ffffff', margin: '12px 0 20px 0' }}>₹ 5000</div>
+                <ul style={{ listStyle: 'none', fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '24px', lineHeight: '1.6' }}>
                   <li>✓ Impact Reports</li>
                   <li>✓ VIP Event Access</li>
                 </ul>
-                <NavLink to="/donate-us" style={{ display: 'inline-block', color: '#ffffff', border: '2px solid #ffffff', padding: '8px 20px', borderRadius: '9999px', fontSize: '0.8rem', textDecoration: 'none', fontWeight: '700' }}>
+                <NavLink to="/donate-us" style={{ display: 'inline-block', color: '#ffffff', border: '1px solid #ffffff', padding: '8px 24px', borderRadius: '9999px', fontSize: '0.85rem', textDecoration: 'none', fontWeight: '600', transition: 'var(--transition)' }}>
                   Donate Now
                 </NavLink>
               </div>
@@ -264,15 +264,15 @@ export default function Home() {
           <h2 style={{ fontSize: '2.6rem', color: 'var(--primary-blue)', marginBottom: '36px', fontFamily: 'var(--font-heading-fancy)', textTransform: 'uppercase', letterSpacing: '1px', textAlign: 'center' }}>
             ABOUT THE FOUNDER / DIRECTOR
           </h2>
-          <div className="grid-2" style={{ alignItems: 'flex-start', gap: '40px', marginTop: '36px' }}>
-            <div style={{ textAlign: 'center' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-start', justifyContent: 'center', gap: '64px', width: '100%', maxWidth: '1100px', margin: '48px auto 0' }}>
+            <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center' }}>
               <img 
                 src={asset('/home-page/founder.png')} 
                 alt="Dr. C. James White" 
-                style={{ width: '280px', height: '360px', objectFit: 'cover', borderRadius: 'var(--radius-md)', margin: '0 auto', boxShadow: 'var(--shadow-md)' }} 
+                style={{ width: '280px', height: '360px', objectFit: 'cover', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)' }} 
               />
             </div>
-            <div>
+            <div style={{ flex: '1 1 500px' }}>
               <h3 style={{ fontSize: '2.5rem', color: 'var(--primary-dark-blue)', marginBottom: '8px', fontFamily: 'var(--font-heading-fancy)', letterSpacing: '1px' }}>
                 C. JAMES WHITE
               </h3>
@@ -292,7 +292,7 @@ export default function Home() {
       </section>
 
       {/* Section 6: Accordion Section */}
-      <section className="section" style={{ background: 'var(--bg-light-blue)' }}>
+      <section className="section" style={{ background: '#ffffff' }}>
         <div className="container">
           <Accordion items={accordionItems} />
         </div>

@@ -475,7 +475,7 @@
 }
 
 .accordion-item {
-  background: var(--bg-card);
+  background-color: #FFFFFF;
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
   overflow: hidden;

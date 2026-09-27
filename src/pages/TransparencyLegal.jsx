@@ -5,7 +5,7 @@ import { asset } from '../utils/asset';
 export default function TransparencyLegal() {
   return (
     <div>
-      <PageHero title="TRANSPARENCY & LEGAL" subtitle="GOVERNANCE & FINANCIAL ACCOUNTABILITY" />
+      <PageHero title="TRANSPARENCY & LEGAL" />
 
       {/* Main Content with PDF Page Background */}
       <section style={{ position: 'relative', minHeight: '600px' }}>

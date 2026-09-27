@@ -107,7 +107,7 @@ export default function GetInvolved() {
                     <h3
                       style={{
                         color: '#005495',
-                        fontSize: '1.8rem',
+                        fontSize: '2.2rem',
                         fontFamily: 'var(--font-heading-fancy)',
                         marginBottom: '8px',
                         letterSpacing: '0.5px',

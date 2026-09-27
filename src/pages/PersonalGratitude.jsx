@@ -1,4 +1,5 @@
 import React from 'react';
+import PageHero from '../components/PageHero';
 import { asset } from '../utils/asset';
 
 export default function PersonalGratitude() {
@@ -12,27 +13,10 @@ export default function PersonalGratitude() {
 
   return (
     <div style={{ background: '#ffffff', width: '100%' }}>
-      <div style={{ background: '#ffffff', padding: '28px 0 20px' }}>
+      <PageHero title="PERSONAL GRATITUDE AND SINCERE THANKS" />
+      <div style={{ background: '#ffffff', padding: '48px 0 20px' }}>
         <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 26px' }}>
-          <h2
-            style={{
-              margin: '0 auto 18px',
-              textAlign: 'center',
-              fontFamily: 'var(--font-heading-fancy)',
-              fontSize: 'clamp(2.2rem, 3vw, 3.6rem)',
-              color: '#005495',
-              letterSpacing: '1px',
-              textTransform: 'uppercase',
-              lineHeight: '1.2'
-            }}
-          >
-            PERSONAL GRATITUDE
-          </h2>
-
           <div style={{ maxWidth: '1170px', margin: '0 auto' }}>
-            <p style={paragraphStyle}>
-              <em style={{ fontStyle: 'italic' }}>With Heartfelt Gratitude and Humble Appreciation</em>
-            </p>
 
             <p style={paragraphStyle}>
               Sincere thanks and profound appreciation are extended to all the institutions,

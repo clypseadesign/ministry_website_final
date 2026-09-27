@@ -12,10 +12,10 @@ export default function StatsCounter({ stats = DEFAULT_STATS }) {
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '32px', textAlign: 'center', maxWidth: '1000px', margin: '0 auto' }}>
       {stats.map((st, i) => (
         <div key={i} style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: '3.8rem', fontWeight: '500', color: '#005495', fontFamily: "var(--font-heading-fancy)", marginBottom: '6px', lineHeight: '1.1' }}>
+          <div style={{ fontSize: '3.8rem', fontWeight: '500', color: '#000000', fontFamily: "var(--font-heading-fancy)", marginBottom: '6px', lineHeight: '1.1' }}>
             {st.num}
           </div>
-          <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
+          <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#000000', textTransform: 'uppercase', letterSpacing: '0.8px' }}>
             {st.label}
           </div>
         </div>
